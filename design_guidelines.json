@@ -1,0 +1,75 @@
+{
+  "project_name": "Frostfish",
+  "app_type": "3D Isometric Web3 Winter Fishing Strategy Game",
+  "archetype": "ORGANIC & EARTHY / RETRO VOXEL GAMING",
+  "theme": {
+    "primary_mode": "dark_winter",
+    "background": "#0B132B",
+    "surface_main": "#1C2541",
+    "surface_pixel_cream": "#F9F6EE",
+    "surface_pixel_dark": "#0B1528",
+    "accent_ice_cyan": "#48CAE4",
+    "accent_frost_blue": "#0077B6",
+    "accent_gold": "#FFB703",
+    "accent_emerald": "#2EC4B6",
+    "accent_crimson": "#E63946",
+    "text_light": "#FFFFFF",
+    "text_muted": "#8D99AE",
+    "border_retro_dark": "#101828",
+    "border_cream": "#E2DAC8"
+  },
+  "typography": {
+    "font_headings": "'Press Start 2P', 'Silkscreen', 'Chakra Petch', monospace",
+    "font_body": "'DM Sans', 'Inter', system-ui, sans-serif",
+    "font_mono": "'JetBrains Mono', monospace",
+    "heading_h1": "text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight uppercase",
+    "heading_h2": "text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight",
+    "heading_h3": "text-lg sm:text-xl font-semibold",
+    "body_text": "text-sm sm:text-base leading-relaxed"
+  },
+  "visual_enhancers": {
+    "pixel_borders": "border-4 border-solid shadow-[4px_4px_0px_0px_rgba(0,0,0,0.8)]",
+    "pixel_button_amber": "bg-amber-400 hover:bg-amber-300 text-slate-950 font-black border-2 border-amber-950 shadow-[0_4px_0_0_#451a03] active:translate-y-1 active:shadow-none transition-all",
+    "pixel_card_cream": "bg-[#F7F4EA] text-slate-900 border-2 border-amber-900/30 rounded-none shadow-[6px_6px_0px_0px_#1e293b]",
+    "hud_glass": "backdrop-blur-md bg-slate-950/80 border border-cyan-500/30 shadow-[0_0_15px_rgba(72,202,228,0.2)]",
+    "token_glow": "drop-shadow-[0_0_10px_rgba(255,183,3,0.7)]"
+  },
+  "game_mechanics_and_ui_layout": {
+    "canvas_viewport": "Full-bleed 100vw x 100vh canvas rendering a 3D isometric voxel floating winter island inspired by ComputersRH & Whiteout Survival.",
+    "lower_left_play": "Prominent pixelated 'PLAY' button floating in bottom-left screen position (bottom-6 left-6). Triggers Wallet Connect Modal (RainbowKit / Robinhood Chain testnet) or Instant Free Demo Mode.",
+    "character_selection_overlay": "Cream pixel-edged dialog pop-up displaying 3 selectable characters with estimated daily yield rates ($FROST token earnings): 1. Rod Fisherman (Basic - 100 $FROST/day), 2. Net Fisherman (Intermediate - 250 $FROST/day), 3. Boat Fisherman (Advanced - 600 $FROST/day).",
+    "gameplay_loop": "1. Deploy Fisherman to ice hole on frozen river map. 2. Fishing animation produces fish into bucket. 3. Bucket fills and is carried to Market Stall. 4. Bot customers queue up in Whiteout Survival style, buy fish, and leave. 5. Live real-time token mining rate accumulates into user $FROST token balance.",
+    "hud_elements": "Top-Left: Player Profile, Wallet Address / Demo Badge, active characters count. Top-Right: $FROST Token Balance with live mining rate ticker (+X/sec), Network Switcher (Robinhood Testnet). Bottom-Right: Speed Multiplier (1x/2x/4x), Sound/FX toggle, Reset/Help guide."
+  },
+  "3d_and_graphics_strategy": {
+    "renderer": "Three.js / React Three Fiber canvas or Canvas 2D Isometric engine with voxel blocks (snow terrain, pine trees covered in snow, frozen blue river, wooden docks, market stall, fishing huts).",
+    "camera_angle": "Isometric Orthographic or Low-FOV Perspective Camera (45 degree rotation, 35 degree incline) matching https://www.computersrh.xyz & Whiteout Survival.",
+    "lighting": "Directional sun lamp with crisp snow shadows, ambient ice cyan fill light, warm orange lantern light at market stall."
+  },
+  "image_urls": [
+    {
+      "category": "voxel_floating_island",
+      "url": "https://images.unsplash.com/photo-1668145898978-1f0cc14eb5d0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHx3aW50ZXIlMjBpY2UlMjBmaXNoaW5nJTIwdm94ZWwlMjBwaXhlbCUyMHNub3clMjB2aWxsYWdlfGVufDB8fHx8MTc5MTcyNTEzNnww&ixlib=rb-4.1.0&q=85",
+      "description": "Isometric voxel wooden cottage on floating snow island surrounded by snowy pine trees"
+    },
+    {
+      "category": "winter_ice_scene",
+      "url": "https://images.unsplash.com/photo-1644702802753-1ad5a6a01fdb?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwxfHx3aW50ZXIlMjBpY2UlMjBmaXNoaW5nJTIwdm94ZWwlMjBwaXhlbCUyMHNub3clMjB2aWxsYWdlfGVufDB8fHx8MTc5MTcyNTEzNnww&ixlib=rb-4.1.0&q=85",
+      "description": "Winter fishermen hut on frozen river ice"
+    }
+  ],
+  "accessibility_and_testing": {
+    "contrast": "Ensure white/cream text over dark slate HUD containers meets APCA / WCAG AA standard (>= 4.5:1).",
+    "data_testid_policy": "All key controls and state displays MUST include data-testid. Examples: data-testid='play-button', data-testid='connect-wallet-button', data-testid='free-demo-button', data-testid='character-card-rod', data-testid='character-card-net', data-testid='character-card-boat', data-testid='deploy-character-button', data-testid='frost-token-balance', data-testid='market-stall-status', data-testid='bot-customer-queue'.",
+    "keyboard_nav": "Full support for ESC to close modals, SPACE to pause/play game loop, WASD/Arrows to pan isometric view."
+  },
+  "instructions_to_main_agent": [
+    "Build the Frostfish Web3 isometric game experience in pure English.",
+    "Set up full-screen isometric voxel scene with snowy terrain, frozen ice fishing spots, market stall, and walking bot customers.",
+    "Implement lower-left prominent PLAY button that opens the wallet connection modal (Robinhood Chain testnet RainbowKit mock/connector) or Free Demo Mode.",
+    "Create cream pixel-edged card overlay for selecting the 3 free characters with daily $FROST yield details.",
+    "Animate the complete economic loop: character fishing -> bucket filling -> market delivery -> customer purchases -> live token mining accumulation.",
+    "Maintain high aesthetic standards: retro pixel fonts, cyan ice/frost lighting, crisp pixel buttons, and clear interactive feedback.",
+    "Ensure all interactive elements have explicit data-testid attributes for automated testing."
+  ]
+}

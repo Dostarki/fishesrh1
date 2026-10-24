@@ -1,0 +1,4 @@
+import { Smartphone, X } from 'lucide-react';
+export const WalletHandoffNotice=({expired,onRetry,onBack,onDismiss})=><aside className="wallet-handoff-notice" role="status" data-testid="wallet-handoff-notice">
+  <Smartphone size={22}/><div><strong data-testid="wallet-handoff-title">{expired?'Connection timed out':'Finish in your wallet'}</strong><p data-testid="wallet-handoff-description">{expired?'You can try again or continue with the free demo.':'After approving, return to this browser tab. If you canceled, choose a wallet again or play the demo.'}</p><div className="wallet-handoff-actions"><button data-testid="retry-wallet-button" onClick={onRetry}>Choose wallet</button><button data-testid="wallet-back-to-demo-button" onClick={onBack}>Back to game</button></div></div><button aria-label="Dismiss wallet notice" data-testid="dismiss-wallet-notice-button" onClick={onDismiss}><X size={18}/></button>
+</aside>;
